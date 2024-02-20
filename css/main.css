@@ -47,6 +47,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 header .title-box {
@@ -91,10 +92,49 @@ header h2 {
 
 section {
     opacity: 0;
-    transition: opacity 1s ease;
+    transition: opacity 2s ease;
     min-height: 20vh;
 }
 
 section.in-view {
     opacity: 1;
+}
+
+.project-card {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    margin-top: 0.2rem;
+    background-color: #707070;
+    padding: 1.5rem 2rem;
+    transition: background-color 0.5s ease;
+}
+
+.project-card:hover {
+    background-color: #909090;
+}
+
+.project-card:nth-child(1) {
+    margin-top: 0;
+}
+
+.project-card h3 {
+    font-family: "Staatliches", Arial, Helvetica, sans-serif;
+}
+
+.project-card p,
+.project-card .language-tag {
+    margin-top: 1rem;
+}
+
+.project-card code {
+}
+
+.project-card .language-tag {
+    background-color: #5a5b66;
+    display: inline-block;
+    font-family: "Staatliches", Arial, Helvetica, sans-serif;
+    padding: 0.3rem 1rem;
+
+    border-radius: 50px;
 }

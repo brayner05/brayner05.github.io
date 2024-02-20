@@ -1,19 +1,33 @@
 @keyframes line-grow-left-right {
-	0% {
-		width: 0%;
-	}
+    0% {
+        width: 0%;
+    }
 
-	100% {
-		width: 100%;
-	}
+    100% {
+        width: 100%;
+    }
 }
 
 @keyframes fade-in {
-	0% {
-		opacity: 0;
-	}
+    0% {
+        opacity: 0;
+    }
 
-	100% {
-		opacity: 1;
-	}
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes icon-bounce {
+    0% {
+        bottom: 16%;
+    }
+
+    50% {
+        bottom: 15%;
+    }
+
+    100% {
+        bottom: 16%;
+    }
 }

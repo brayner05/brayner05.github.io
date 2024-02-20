@@ -1,9 +1,13 @@
 /* Mobile */
 @media screen and (max-width: 768px) {
-	nav ul {
-		text-align: center;
-	}
+    nav ul {
+        text-align: center;
+    }
 
-	header h1 {
-	}
+    header h1 {
+    }
+}
+
+/* Desktop (large) */
+@media (min-width: 1281px) {
 }

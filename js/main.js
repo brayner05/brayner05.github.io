@@ -9,14 +9,14 @@ const isInView = element => {
 };
 
 /**
- * Fades a section in or out based on where the section is on the screen.
- * @param {HTMLElement} section
+ * Fades a element in or out based on where the element is on the screen.
+ * @param {HTMLElement} element
  */
-const fadeSection = section => {
-    if (isInView(section)) {
-        section.classList.add("in-view");
+const fadeElement = element => {
+    if (isInView(element)) {
+        element.classList.add("in-view");
     } else {
-        section.classList.remove("in-view");
+        element.classList.remove("in-view");
     }
 };
 
@@ -26,7 +26,7 @@ const fadeSection = section => {
  */
 const handleScroll = event => {
     for (const section of document.querySelectorAll("section")) {
-        fadeSection(section);
+        fadeElement(section);
     }
 };
 
