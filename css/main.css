@@ -79,6 +79,9 @@ header h2 {
 .heading-underline {
     font-family: "Staatliches", Arial, Helvetica, sans-serif;
     font-size: 1.5rem;
+    border-bottom: 3px solid #fff;
+    margin-bottom: 1rem;
+    display: inline-block;
 }
 
 #about-section p {
@@ -89,6 +92,7 @@ header h2 {
 section {
     opacity: 0;
     transition: opacity 1s ease;
+    min-height: 20vh;
 }
 
 section.in-view {
