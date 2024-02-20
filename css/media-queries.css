@@ -1,0 +1,9 @@
+/* Mobile */
+@media screen and (max-width: 768px) {
+	nav ul {
+		text-align: center;
+	}
+
+	header h1 {
+	}
+}
