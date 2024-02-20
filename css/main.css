@@ -1,0 +1,86 @@
+@import "./animations.css";
+@import "./media-queries.css";
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: hsl(0, 0%, 14%);
+	color: #fff;
+	font-family: "Poppins", Arial, Helvetica, sans-serif;
+	padding: 1rem 20%;
+}
+
+nav {
+	font-weight: 600;
+	width: 100%;
+}
+
+nav ul {
+	position: absolute;
+	padding: 0.5rem 2rem;
+	right: 0;
+}
+
+nav ul li {
+	display: inline;
+	margin: 1rem 1rem;
+}
+
+nav ul a {
+	color: #fff;
+	text-decoration: none;
+	transition: color 0.5s ease;
+}
+
+nav ul a:hover {
+	color: #cdcdcd;
+}
+
+header {
+	min-height: 90vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+header .title-box {
+	width: 100%;
+	text-align: center;
+}
+
+.line {
+	width: 100%;
+	margin: 2rem auto;
+	height: 0.2rem;
+	background-color: #fff;
+	animation: line-grow-left-right 1s;
+}
+
+header h1 {
+	font-size: 4rem;
+	font-weight: bolder;
+	font-family: "Staatliches", Arial, Helvetica, sans-serif;
+	margin: auto;
+	animation: fade-in 2s;
+}
+
+header h2 {
+	font-size: 1rem;
+	font-weight: 500;
+	animation: fade-in 2s;
+}
+
+.heading-underline {
+	font-family: "Staatliches", Arial, Helvetica, sans-serif;
+	font-size: 1.5rem;
+}
+
+.about-section p {
+	line-height: 31px;
+	font-weight: bold;
+}
