@@ -138,6 +138,24 @@ section.in-view {
     border-radius: 50px;
 }
 
+.project-card a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.project-card .material-symbols-outlined {
+    vertical-align: bottom;
+    display: none;
+}
+
+.project-card:hover .material-symbols-outlined {
+    display: inline;
+}
+
+section ul {
+    list-style-position: inside;
+}
+
 /* Mobile */
 @media screen and (max-width: 768px) {
     body {
@@ -171,5 +189,9 @@ section.in-view {
 
     section:not(#portfolio-section) {
         padding: 0 2rem;
+    }
+
+    #portfolio-section h2.heading-underline {
+        margin-left: 2rem;
     }
 }

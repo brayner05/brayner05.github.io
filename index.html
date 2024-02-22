@@ -14,13 +14,14 @@
             rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
         />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        />
         <link rel="stylesheet" href="css/main.css" />
     </head>
     <body>
         <nav>
-            <!--
-                Todo: On mobile collapse nav into drop down menu
-            -->
             <ul>
                 <li><a href="index.html" id="home-link">Home</a></li>
                 <li><a href="index.html" id="about-link">About</a></li>
@@ -32,13 +33,11 @@
                 <div class="line"></div>
                 <h1>Brayden Rayner</h1>
                 <h2>Computer Science Student @ Dalhousie University</h2>
+                <h2>Freelance Developer</h2>
                 <div class="line"></div>
             </div>
         </header>
         <section id="about-section">
-            <!--
-                Todo: Use JavaScript to make text animate in and out as the user scrolls
-            -->
             <h2 class="heading-underline">About</h2>
             <p>
                 My name is Brayden Rayner. I am a computer science student at
@@ -46,19 +45,34 @@
                 age of nine, when I was first introduced to HTML and I am
                 pursuing an undergraduate degree in computer science. I have
                 worked on a variety of projects in a number of languages, and
-                enjoy solving problems and how things work under the hood. In
-                the future I would like to attend grad school for computer
-                science.
+                enjoy solving problems and learning how things work under the
+                hood. In the future I would like to attend grad school for
+                computer science.
+            </p>
+        </section>
+        <section id="services">
+            <h2 class="heading-underline">Services</h2>
+            <p>
+                <ul>
+                    <li>Web Development</li>
+                    <li>Web Design</li>
+                    <li>Server Side Scripting</li>
+                    <li>Application Development</li>
+                </ul>
             </p>
         </section>
         <section id="portfolio-section">
             <h2 class="heading-underline">Portfolio</h2>
             <div class="projects">
-                <a
-                    class="project-card"
-                    href="https://github.com/brayner05/kt-csv"
-                >
-                    <h3>kt-csv</h3>
+                <span class="project-card">
+                    <h3>
+                        <a href="https://github.com/brayner05/kt-csv">
+                            kt-csv
+                            <span class="material-symbols-outlined">
+                                link
+                            </span>
+                        </a>
+                    </h3>
                     <p>
                         This is a CSV parser that I wrote in Kotlin. It provides
                         a class called <code>CSVReader</code> which reads a CSV
@@ -66,28 +80,36 @@
                         used for a variety of tasks.
                     </p>
                     <span class="language-tag">Kotlin</span>
-                </a>
-                <a
-                    class="project-card"
-                    href="https://github.com/brayner05/jpeg2ascii"
-                >
-                    <h3>jpeg2ascii</h3>
+                </span>
+                <span class="project-card">
+                    <h3>
+                        <a href="https://github.com/brayner05/jpeg2ascii"
+                            >jpeg2ascii
+                            <span class="material-symbols-outlined">
+                                link
+                            </span>
+                        </a>
+                    </h3>
                     <p>
                         This is a program I made that takes in a JPEG image and
                         converts it to ASCII art.
                     </p>
                     <span class="language-tag">Java</span>
-                </a>
-                <a
-                    class="project-card"
-                    href="https://github.com/brayner05/minishell"
-                >
-                    <h3>Minishell</h3>
+                </span>
+                <span class="project-card">
+                    <h3>
+                        <a href="https://github.com/brayner05/minishell"
+                            >Minishell
+                            <span class="material-symbols-outlined">
+                                link
+                            </span>
+                        </a>
+                    </h3>
                     <p>
                         A tiny shell I wrote in x86 Assembly while learning it.
                     </p>
                     <span class="language-tag">x86 Assembly</span>
-                </a>
+                </span>
             </div>
         </section>
         <script src="js/main.js"></script>
