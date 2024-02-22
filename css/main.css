@@ -126,9 +126,6 @@ section.in-view {
     margin-top: 1rem;
 }
 
-.project-card code {
-}
-
 .project-card .language-tag {
     background-color: #5a5b66;
     display: inline-block;

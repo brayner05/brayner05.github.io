@@ -1,6 +1,29 @@
-const homeLink = document.getElementById("home-link")
-const aboutLink = document.getElementById("about-link")
-const portfolioLink = document.getElementById("portfolio-link")
+const navBar = document.querySelector("nav")
+
+const navLinks = [
+    {
+        id: "home-link",
+        element: document.getElementById("home-link"),
+        target: document.querySelector("header"),
+    },
+    {
+        id: "about-link",
+        element: document.getElementById("about-link"),
+        target: document.getElementById("about-section"),
+    },
+    {
+        id: "portfolio-link",
+        element: document.getElementById("portfolio-link"),
+        target: document.getElementById("portfolio-section"),
+    },
+]
+
+for (const link of navLinks) {
+    link.element.addEventListener("click", () => {
+        const bounds = link.target.getBoundingClientRect()
+        window.scrollTo(0, bounds.top)
+    })
+}
 
 /**
  * Checks whether or not an HTML element is currently visible
@@ -8,8 +31,8 @@ const portfolioLink = document.getElementById("portfolio-link")
  * @returns whether or not element is visible
  */
 const isInView = element => {
-    const bounding = element.getBoundingClientRect()
-    return bounding.top >= 0 && bounding.top <= window.innerHeight
+    const bounds = element.getBoundingClientRect()
+    return bounds.top >= 0 && bounds.top <= window.innerHeight
 }
 
 /**
