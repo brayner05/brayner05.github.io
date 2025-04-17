@@ -4,5 +4,174 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
 }
 
+a {
+    color: rgb(31, 134, 124);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+p {
+    font-size: 1.3rem;
+}
+
+h2, h3 {
+    font-family: "Domine", serif;
+    font-weight: 500;
+}
+
+nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.185);
+    transition: 0.3s ease-in-out;
+}
+
+nav > span {
+    font-family: "JetBrains Mono", monospace;
+}
+
+nav.hide {
+    transform: translateY(-100%);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color:rgb(31, 134, 124);
+    margin-left: 2rem;
+}
+
+.title, .subtitle {
+    font-family: "JetBrains Mono";
+    font-weight: 500;
+}
+
+.title {
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    font-size: 1.4rem;
+}
+
+body {
+    margin: 3rem;
+    position: relative;
+    background-color: rgb(240, 254, 255);
+}
+
+header {
+    font-family: "JetBrains Mono";
+    width: 100%;
+}
+
+main {
+    width: 100%;
+    z-index: 10;
+}
+
+main h2 {
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+main section {
+    width: 100%;
+}
+
+ul.skills {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+ul.skills li {
+    display: inline;
+    padding: 0.6rem 1.2rem;
+    background-color: rgb(207, 252, 255);
+    color: rgb(31, 134, 124);
+    font-weight: 500;
+    border-radius: 5px;
+}
+
+section#about-me p {
+    line-height: 2.2rem;
+}
+
+section#projects > ul {
+    list-style: none;
+}
+
+li.project {
+    border: rgb(31, 134, 124) solid 1px;
+    border-radius: 5px;
+    padding: 1.3rem 2rem;
+}
+
+li.project {
+    list-style-position: inside;
+    margin-top: 1rem;
+    z-index: 10;
+}
+
+li.project .title-bar {
+    display: flex;
+    justify-content: space-between;
+}
+
+li.project h3 {
+    font-family: "JetBrains Mono";
+}
+
+li.project h3 b {
+    font-family: "JetBrains Mono";
+    font-weight: 800;
+}
+
+li.project .title-bar a {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: rgb(31, 134, 124);
+}
+
+li.project .title-bar a:hover {
+    display: flex;
+    justify-content: center;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    color: rgb(31, 134, 124);
+}
+
+li.project .skills {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+li.project p {
+    margin-bottom: 1rem;
+    z-index: 10;
+}
+
+li.project ul, li.project p {
+    font-size: 1.15rem;
+}
