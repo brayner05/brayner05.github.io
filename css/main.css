@@ -25,6 +25,10 @@ h2, h3 {
     font-weight: 500;
 }
 
+h2 {
+    color: rgb(31, 134, 124);
+}
+
 nav {
     width: 100%;
     position: fixed;
@@ -61,6 +65,7 @@ nav a {
 .title, .subtitle {
     font-family: "JetBrains Mono";
     font-weight: 500;
+    color: rgb(0, 0, 0);
 }
 
 .title {
@@ -80,11 +85,27 @@ body {
 header {
     font-family: "JetBrains Mono";
     width: 100%;
+    border-bottom: 2px solid rgb(31, 134, 124);
+    padding-bottom: 2rem;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.separator {
+    width: 100%;
+    height: 80%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transform:rotateY('');
+    background-position: left;
+    background-size: cover;
+    background-image: url("../img/separator.svg");
 }
 
 main {
     width: 100%;
-    z-index: 10;
 }
 
 main h2 {
@@ -110,6 +131,7 @@ ul.skills li {
     background-color: rgb(207, 252, 255);
     color: rgb(31, 134, 124);
     font-weight: 500;
+    font-size: 1rem;
     border-radius: 5px;
 }
 
@@ -125,12 +147,10 @@ li.project {
     border: rgb(31, 134, 124) solid 1px;
     border-radius: 5px;
     padding: 1.3rem 2rem;
-}
-
-li.project {
     list-style-position: inside;
-    margin-top: 1rem;
+    margin-top: 2rem;
     z-index: 10;
+    background-color: #fff;
 }
 
 li.project .title-bar {
@@ -174,4 +194,27 @@ li.project p {
 
 li.project ul, li.project p {
     font-size: 1.15rem;
+}
+
+/* Mobile */
+@media screen and (max-width: 600px) {
+    body {
+        margin: 2rem;
+    }
+
+    header {
+        min-height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    header h1.title {
+        font-size: 2.2rem;
+        font-weight: bold;
+    }
+
+    header h2.subtitle {
+        font-size: 1.2rem;
+    }
 }
