@@ -206,6 +206,10 @@ section#about-me > ul {
   list-style: none;
 }
 
+section#projects span.material-symbols-outlined {
+  vertical-align: middle;
+  color: rgb(31, 134, 124);
+}
 section#projects ul {
   list-style: none;
 }
