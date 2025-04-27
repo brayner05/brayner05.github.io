@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+a {
+  color: rgb(31, 134, 124);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+p {
+  font-size: 1.3rem;
+}
+@media (max-width: 600px) {
+  p {
+    font-size: 1rem;
+  }
+  p br {
+    margin-bottom: 2rem;
+  }
+}
+
+p::selection {
+  background-color: rgb(31, 134, 124);
+  color: rgb(246, 254, 255);
+}
+
+p br {
+  margin-bottom: 2rem;
+}
+
+h1, h2, h3, h4, ht, h6 {
+  font-family: "Domine", serif;
+  font-weight: bold;
+  color: rgb(31, 134, 124);
+}
+
+nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(246, 254, 255);
+  box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.185);
+  transition: 0.3s ease-in-out;
+  z-index: 9999;
+}
+nav span {
+  font-family: "JetBrains Mono";
+  text-transform: uppercase;
+  color: rgb(31, 134, 124);
+  font-weight: bold;
+}
+nav.hide {
+  transform: translateY(-150%);
+}
+nav ul {
+  display: flex;
+  list-style: none;
+}
+nav a {
+  margin-left: 2rem;
+}
+
+.title, .subtitle {
+  color: rgb(246, 254, 255);
+}
+
+.title {
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1.4rem;
+}
+
+body {
+  position: relative;
+  background-color: rgb(246, 254, 255);
+}
+
+.container {
+  padding: 7rem;
+  padding-top: 0;
+}
+@media (max-width: 600px) {
+  .container {
+    padding: 1rem;
+  }
+  .container section {
+    padding: 0 1rem;
+  }
+  .container section#projects {
+    padding: 0;
+  }
+  .container section#projects > * {
+    padding: 0 1rem;
+  }
+  .container section#projects ul {
+    padding: 0;
+  }
+}
+
+code, pre {
+  font-family: "JetBrains Mono";
+  color: rgb(31, 134, 124);
+  background-color: rgb(215, 248, 250);
+  font-size: 0.8em;
+  padding: 0.2em 0.5rem;
+  border-radius: 5px;
+}
+
+code {
+  text-align: center;
+}
+
+pre {
+  padding: 1rem;
+  margin: 1rem;
+  position: relative;
+}
+pre .code-string {
+  color: rgb(50, 189, 175);
+  font-family: inherit;
+}
+
+/*# sourceMappingURL=theme.css.map */

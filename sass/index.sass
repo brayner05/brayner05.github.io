@@ -1,0 +1,153 @@
+@use 'theme'
+
+
+header
+    font-family: theme.$title-font
+    width: 100%
+    border-bottom: 2px solid theme.$secondary-color
+    background-color: theme.$secondary-color
+    color: theme.$primary-color
+    z-index: theme.$layer-base
+    padding: 5rem
+    text-align: center
+    text-transform: uppercase
+    position: relative
+
+    h1, h2, h3, h4, h5
+        font-family: theme.$title-font
+
+    @media (max-width: 600px)
+        min-height: 80vh
+        @include theme.flex-centered
+        flex-direction: column
+        flex-wrap: wrap
+
+        h1.title
+            font-size: 2.5rem
+            font-weight: bold
+
+        h2.subtitle
+            font-size: 1.2rem
+
+
+main
+    width: 100%
+
+    h2
+        margin-top: 4rem
+        margin-bottom: 1rem
+
+    section
+        width: 100%
+
+
+ul.skills
+    list-style: none
+    display: flex
+    flex-wrap: wrap
+    gap: 0.5rem
+
+    li
+        display: inline
+        padding: 0.6rem 1.2rem
+        background-color: rgb(207, 252, 255)
+        color: theme.$secondary-color
+        font-weight: 500
+        font-size: 1rem
+        border-radius: theme.$round-1
+
+        @media (max-width: 600px)
+            &.project
+                left: 0
+
+
+section#about-me
+    p
+        line-height: 2.2rem
+
+    & > ul
+        list-style: none
+
+
+section#projects
+    ul
+        list-style: none
+
+
+li.project
+    border: 1px solid theme.$secondary-color
+    border-radius: theme.$round-1
+    padding: 1.3rem 2rem
+    margin-top: 2rem
+    z-index: theme.$layer-base
+    background-color: #fff
+
+    .title-bar
+        display: flex
+        justify-content: space-between
+
+        a
+            display: flex
+            justify-content: center
+            color: theme.$secondary-color
+
+            &:hover
+                text-decoration: underline
+                text-decoration-thickness: 2px
+
+    h3
+        font-family: theme.$monospace-font
+
+    h3 b
+        font-family: inherit
+        font-weight: 800
+
+    .code-subtitle
+        font-family: theme.$heading-font
+        color: theme.$secondary-color
+
+    .skills
+        margin: 1rem 0
+
+    p, ul
+        font-size: 1.15rem
+
+    p
+        margin-bottom: 1rem
+        line-spacing: 2.2rem
+        z-index: theme.$layer-base
+
+    ul
+        list-style-position: outside
+
+    
+.language-list
+    @include theme.flex-centered
+    flex-direction: column
+
+
+section#languages 
+    ol
+        list-style-position: inside
+        font-size: 1.5rem
+        margin: 1rem 2rem
+        text-align: left
+
+    h3
+        color: theme.$secondary-color
+        margin-top: 2rem
+        margin-bottom: 1rem
+
+    .language-name
+        font-family: theme.$heading-font
+        color: theme.$secondary-color
+
+    ul
+        list-style: none
+        li > *
+            font-size: 1rem
+
+    @media (max-width: 600px)
+        ol, ul
+            max-width: 100%
+            padding: 1

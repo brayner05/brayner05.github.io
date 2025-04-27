@@ -1,0 +1,172 @@
+
+// =====================
+// ####### FONTS #######
+// =====================
+
+$heading-font:      "Domine", serif
+$body-font:         "Nunito", sans-serif
+$monospace-font:     "JetBrains Mono"
+$title-font:        $monospace-font
+
+
+// =====================
+// ###### COLOURS ######
+// =====================
+
+$primary-color:     rgb(246, 254, 255)
+$code-block-color:  rgb(215, 248, 250)
+$secondary-color:   rgb(31, 134, 124)
+
+
+$round-0:           0
+$round-1:           5px
+$round-2:           2 * $round-1
+
+// ====================
+// ###### LAYERS ######
+// ====================
+
+$layer-behind:      -1
+$layer-base:        0
+$layer-top:         9999
+$layer-1:           1
+$layer-2:           2
+
+
+// ======================
+// ##### FONT SIZES #####
+// ======================
+
+@mixin flex-centered()
+    display: flex
+    justify-content: center
+    align-items: center
+
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: $body-font
+
+
+a
+    color: $secondary-color
+    text-decoration: none
+
+    &:hover
+        text-decoration: underline
+
+
+p
+    font-size: 1.3rem
+    @media (max-width: 600px)
+        font-size: 1rem
+        br
+            margin-bottom: 2rem
+
+
+p::selection
+    background-color: $secondary-color
+    color: $primary-color
+
+p br
+    margin-bottom: 2rem
+
+
+h1, h2, h3, h4, ht, h6
+    font-family: $heading-font
+    font-weight: bold
+    color: $secondary-color
+
+
+nav
+    width: 100%
+
+    position: fixed
+    top: 0
+    left: 0
+    padding: 1rem 2rem
+
+    @include flex-centered
+    justify-content: space-between
+
+    background-color: $primary-color
+    box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.185)
+    transition: 0.3s ease-in-out
+    z-index: $layer-top
+
+    span
+        font-family: $monospace-font
+        text-transform: uppercase
+        color: $secondary-color
+        font-weight: bold
+
+    &.hide
+        transform: translateY(-150%)
+
+    ul
+        display: flex
+        list-style: none
+
+    a
+        margin-left: 2rem
+
+
+.title, .subtitle
+    color: $primary-color
+
+
+.title
+    margin-bottom: 1rem
+
+
+.subtitle
+    font-size: 1.4rem
+
+
+body
+    position: relative
+    background-color: $primary-color
+
+
+.container
+    padding: 7rem
+    padding-top: 0
+
+    @media (max-width: 600px)
+        padding: 1rem
+
+        section
+            padding: 0 1rem
+
+        section#projects
+            padding: 0
+
+            & > *
+                padding: 0 1rem
+            ul
+                padding: 0
+
+
+code, pre
+    font-family: $monospace-font
+    color: $secondary-color
+    background-color: $code-block-color
+    font-size: 0.8em
+    padding: 0.2em 0.5rem
+    border-radius: $round-1
+
+
+code
+    text-align: center
+
+
+pre
+    padding: 1rem
+    margin: 1rem
+    position: relative
+
+    .code-string
+        color: rgb(50, 189, 175)
+        font-family: inherit
