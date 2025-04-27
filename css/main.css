@@ -20,6 +20,11 @@ p {
     font-size: 1.3rem;
 }
 
+p::selection {
+    background-color: rgb(31, 134, 124);
+    color: rgb(255, 255, 255);
+}
+
 p br {
     margin-bottom: 2rem;
 }
