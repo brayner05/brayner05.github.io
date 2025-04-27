@@ -21,7 +21,7 @@ p {
 }
 
 p br {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 h2, h3 {
@@ -42,9 +42,10 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: rgb(240, 254, 255);
+    background-color: rgb(246, 254, 255);
     box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.185);
     transition: 0.3s ease-in-out;
+    z-index: 9999;
 }
 
 nav > span {
@@ -72,7 +73,7 @@ nav a {
 .title, .subtitle {
     font-family: "JetBrains Mono";
     font-weight: 500;
-    color: rgb(207, 252, 255);
+    color: rgb(246, 254, 255);
 }
 
 .title {
@@ -86,13 +87,12 @@ nav a {
 body {
     /* margin: 3rem; */
     position: relative;
-    background-color: rgb(240, 254, 255);
+    background-color: rgb(246, 254, 255);
 }
 
 .container {
-    padding: 3rem;
+    padding: 7rem;
     padding-top: 0;
-    background-color: rgb(240, 254, 255);
 }
 
 header {
@@ -197,9 +197,87 @@ li.project p {
     z-index: 10;
 }
 
+li.project ul {
+    list-style-position: outside;
+}
+
 li.project ul, li.project p {
     font-size: 1.15rem;
 }
+
+.language-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section#languages ol {
+    list-style-position: inside;
+    font-size: 1.5rem;
+    margin: 1rem 2rem;
+    text-align: left;
+}
+
+section#languages h3 {
+    color: rgb(31, 134, 124);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+section#languages .language-name {
+    font-family: "Domine", sans-serif;
+    color: rgb(31, 134, 124);
+}
+
+section#projects ul {
+    list-style: none;
+}
+
+code, pre {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.8em;
+    padding: 0.2em 0.5em;
+    color: rgba(31, 134, 124);
+    background-color: rgb(240, 254, 255, 0.7);
+    border-radius: 5px;
+}
+
+code {
+    text-align: center;
+}
+
+pre {
+    padding: 1rem;
+    margin: 1rem;
+    position: relative;
+}
+
+pre .copy-button {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(-20%, -50%);
+    background-color: rgba(31, 134, 124, 0.603);
+    border: none;
+    color: #fff;
+    z-index: 1;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+
+
+pre .code-string {
+    color: rgb(50, 189, 175);
+    font-family: inherit;
+}
+
+.project .code-subtitle {
+    font-family: "Domine", serif;
+    color: rgb(31, 134, 124);
+}
+
 
 /* Mobile */
 @media screen and (max-width: 600px) {
@@ -249,7 +327,16 @@ li.project ul, li.project p {
         left: 0;
     }
 
+    p {
+        hyphens: manual;
+    }
+
     p br {
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    section#languages ol, section#languages ul {
+        max-width: 100%;
+        padding: 1;
     }
 }
