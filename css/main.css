@@ -226,7 +226,27 @@ li.project ul, li.project p {
     }
 
     .container {
-        padding: 2rem;
+        padding: 1rem;
+    }
+
+    .container section {
+        padding: 0 1rem;
+    }
+
+    .container section#projects {
+        padding: 0;
+    }
+
+    .container section#projects > * {
+        padding: 0 1rem;
+    }
+
+    .container section#projects ul {
+        padding: 0;
+    }
+
+    li.project {
+        left: 0;
     }
 
     p br {
