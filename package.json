@@ -1,0 +1,17 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npx @tailwindcss/cli -i ./src/input.css -o ./dist/output.css --watch\" \"php -S localhost:8000\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.8",
+    "concurrently": "^9.1.2",
+    "tailwindcss": "^4.1.8"
+  }
+}
