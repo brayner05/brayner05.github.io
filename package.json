@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "concurrently \"npx @tailwindcss/cli -i ./src/input.css -o ./dist/output.css --watch\" \"php -S localhost:8000\""
+    "dev": ""
   },
   "keywords": [],
   "author": "",

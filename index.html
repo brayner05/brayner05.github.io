@@ -4,187 +4,28 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-            rel="stylesheet"
-        />
-        <link rel="stylesheet" href="/dist/output.css" />
-        <script src="//unpkg.com/alpinejs" defer></script>
+        <link rel="stylesheet" href="./dist/index.css" />
+        <script
+            src="https://kit.fontawesome.com/65ef779ce0.js"
+            crossorigin="anonymous"
+        ></script>
     </head>
-    <body class="font-[Poppins]">
-        <nav
-            class="absolute top-0 left-0 w-full flex items-center justify-between text-white z-100 px-10 py-5"
-        >
-            <span class="text-lg font-bold uppercase">Brayden Rayner</span>
-            <ul
-                class="flex list-none space-x-5"
-                x-data="{ links: [{ name: 'About', path: '#' }, { name: 'Contact', path: '#' }] }"
-            >
-                <template x-for="link in links">
-                    <li>
-                        <a
-                            x-text="link.name"
-                            x-bind:href="link.path"
-                            class="font-semibold"
-                        ></a>
-                    </li>
-                </template>
+    <body>
+        <main>
+            <div class="intro">
+                <h1>Brayden Rayner</h1>
+                <ul>
+                    <li>BCS Student @ Dalhousie University</li>
+                    <li>Programmer</li>
+                    <li>Open Source Enthusiast</li>
+                </ul>
+            </div>
+        </main>
+        <nav>
+            <ul>
+                <li><a href="#">LinkedIn</a></li>
+                <li><a href="#">GitHub</a></li>
             </ul>
         </nav>
-        <header
-            class="w-full select-none min-h-[100vh] bg-sky-900 relative flex flex-col justify-center items-center space-y-5"
-        >
-            <div class="text-white -translate-y-8 text-center">
-                <div
-                    class="font-extrabold uppercase text-5xl mb-5 font-[Montserrat]"
-                >
-                    Hello, I'm
-                    <h1
-                        class="inline-block hover:text-sky-500 transition-all duration-500"
-                    >
-                        Brayden Rayner
-                    </h1>
-                </div>
-                <p class="font-semibold text-2xl">
-                    Computer Science Student | Software Engineer
-                </p>
-            </div>
-            <ul
-                class="flex text-white space-x-5"
-                x-data="{ buttons: [ { name: 'Contact', path: '#' }, { name: 'My Work', path: '@' } ] }"
-            >
-                <template x-for="button in buttons">
-                    <li>
-                        <a
-                            x-bind:href="button.path"
-                            class="font-semibold border-2 border-sky-500 rounded-lg px-3 py-2 hover:bg-sky-500 duration-500 transition-colors"
-                        >
-                            <span x-text="button.name"></span>
-                        </a>
-                    </li>
-                </template>
-            </ul>
-            <button
-                class="text-white font-bold absolute bottom-1/5 animate-bounce"
-            >
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    class="size-6"
-                >
-                    <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="m19.5 8.25-7.5 7.5-7.5-7.5"
-                    />
-                </svg>
-            </button>
-            <div class="custom-shape-divider-bottom-1749259082">
-                <svg
-                    data-name="Layer 1"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 1200 120"
-                    preserveAspectRatio="none"
-                >
-                    <path
-                        d="M1200 120L0 16.48 0 0 1200 0 1200 120z"
-                        class="fill-sky-700"
-                    ></path>
-                </svg>
-            </div>
-        </header>
-        <main class="w-full min-h-screen bg-sky-700">
-            <section class="px-50 py-5 text-white w-full">
-                <h3 class="font-bold text-3xl mb-5">My Work</h3>
-                <ul x-data="myWork" class="space-y-25">
-                    <template x-for="project in projects">
-                        <li class="space-y-3">
-                            <a
-                                class="font-bold text-xl uppercase font-[Montserrat] inline-flex space-x-3 hover:underline duration-300 transition-all"
-                                x-bind:href="project.link"
-                            >
-                                <span
-                                    x-text="project.title"
-                                    class="inline"
-                                ></span>
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke-width="1.5"
-                                    stroke="currentColor"
-                                    class="size-6 align-middle"
-                                >
-                                    <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244"
-                                    />
-                                </svg>
-                            </a>
-                            <ul
-                                class="flex space-x-2"
-                                x-data="project.techStack"
-                            >
-                                <template x-for="item in project.techStack">
-                                    <li
-                                        class="text-white bg-sky-500 px-3 py-2 rounded-lg font-semibold"
-                                        x-text="item"
-                                    ></li>
-                                </template>
-                            </ul>
-                            <p
-                                class="font-normal text-lg"
-                                x-text="project.description"
-                            ></p>
-                            <div>
-                                <img
-                                    x-bind:src="project.thumbnailUrl"
-                                    alt=""
-                                    srcset=""
-                                />
-                            </div>
-                        </li>
-                    </template>
-                </ul>
-            </section>
-        </main>
-        <footer></footer>
-        <script>
-            document.addEventListener("alpine:init", () => {
-                Alpine.data("myWork", () => ({
-                    projects: [
-                        {
-                            title: "Nadra - Modern Scripting Language",
-                            techStack: ["Rust"],
-                            link: "https://github.com/brayner05/nadra",
-                            description:
-                                "Nadra is a modern scripting language that is transpiled to Python 3. Nadra is a (mostly) procedural language intended for writing scripts to automate trivial but tedious tasks.",
-                            thumbnailUrl:
-                                "/resources/images/thumbnail-nadra.png",
-                        },
-                        {
-                            title: "Todo List",
-                            link: "https://github.com/brayner05/todo-list-laravel",
-                            techStack: [
-                                "PHP",
-                                "Laravel",
-                                "TailwindCSS",
-                                "Alpine.js",
-                            ],
-                            description:
-                                "A CRUD based todo application written in Laravel + AlpineJS + TailwindCSS",
-                            thumbnailUrl:
-                                "/resources/images/thumbnail-todo.png",
-                        },
-                    ],
-                }));
-            });
-        </script>
     </body>
 </html>
