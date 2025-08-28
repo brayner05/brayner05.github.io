@@ -17,21 +17,37 @@ body
     background-image: url('../images/pexels-rahulp9800-1933900.jpg')
     background-position: center
     background-size: cover
+    background-repeat: no-repeat
+    min-height: 100vh
+    display: flex
+    flex-direction: column
+
+    overflow: hidden
+    @media screen and (max-width: 2082px)
+        overflow-y: auto
 
     main
-        min-height: 100vh
+        flex: 1
         width: 100%
         display: flex
         background-color: theme.$overlay-bg
 
+        @media screen and (max-width: 2082px)
+            flex-direction: column
+
         section
+            overflow-y: auto
             flex: 1
             user-select: none
             padding: 10rem
-            min-height: 100vh
             display: flex
             flex-direction: column
             gap: 5rem
+            justify-content: space-between
+
+            @media screen and (max-width: 2082px)
+                padding: 5rem 10rem
+                column-gap: 1rem
 
 .cursor-blink
     content: "a"

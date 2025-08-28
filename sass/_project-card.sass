@@ -1,10 +1,16 @@
 @use 'theme'
 
-.project-card
-    margin: 2rem 0
+.projects
+    display: flex
+    flex-direction: column
+    gap: 2rem
 
+.project-card
     p
         margin: 1rem 0
 
     p, a
         font-size: 1.5rem
+
+        @media screen and (max-width: 2082px)
+            font-size: 1.2rem
