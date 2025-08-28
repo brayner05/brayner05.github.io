@@ -1,158 +1,37 @@
+@use "theme"
+@use 'nav'
+@use 'main'
+@use 'animations'
+@use 'terminal'
+@use 'project-card'
+@use 'articles'
+
 *
     margin: 0
     padding: 0
     box-sizing: border-box
 
 body
-    padding: 10rem 10rem
-    font-family: "JetBrains Mono"
-    color: #d6d6d6
-    background-color: #1f1d1d
+    font-family: theme.$default-font
+    color: theme.$primary-fg
+    background-image: url('../images/pexels-rahulp9800-1933900.jpg')
+    background-position: center
+    background-size: cover
 
-h1
-    font-weight: 800
-    font-size: 3.5rem
-    text-transform: uppercase
-
-a
-    color: #d7d7d7
-
-nav
-    padding: 1rem 1.5rem
-    background-color: #111010
-    width: 100%
-    font-size: 1rem
-    position: fixed
-    bottom: 0
-    left: 0
-
-    ul
-        display: flex
-        list-style: none
-        gap: 1.5rem
-
-        li
-            a
-                text-decoration: none
-
-                &:hover
-                    text-decoration: underline
-
-main
-    width: 100%
-    min-height: 30vh
-    user-select: none
-    ul
-        list-style: none
-
-    .intro
-        ul.whoami
-            margin: 1rem 0
-            list-style: none
-            text-transform: uppercase
-            font-weight: 600
-            font-size: 2.2rem
-            color: #a5a5a5
-
-        li
-            margin: 0.5rem 0
-            transition: ease-in-out .2s
-
-            &:hover
-                font-size: 2.5rem
-
-            &.student:hover
-                color: #d3c366
-
-            &.programmer:hover
-                color: #3c4fa7
-
-            &.foss-enthusiast:hover
-                color: #4da05b
-
-    @keyframes typewriter
-        from
-            width: 0%
-        to
-            width: 100%
-
-    .about-me
+    main
+        min-height: 100vh
         width: 100%
-        min-height: 1rem
-        background-color: #111010
-        border-radius: 10px
-        line-height: 1.8
-        margin: 5rem 0
+        display: flex
+        background-color: theme.$overlay-bg
 
-        .title-bar
-            width: 100%
-            min-height: 1rem
-            background-color: #d7d7d7
-            color: #111010
-            border-top-left-radius: 10px
-            border-top-right-radius: 10px
-            padding: 0.2rem 1rem
-            display: flex
-            justify-content: space-between
-            align-items: center
-            font-size: 0.9rem
-
-            .shell-btns
-                display: flex
-                gap: 0.5rem
-
-                .shell-btn
-                    width: 0.5rem
-                    height: 0.5rem
-                    border-radius: 50px
-                    background-color: black
-
-                    &.minimize
-                        background-color: #d3c366
-
-                    &.maximize
-                        background-color: #69d366
-
-                    &.close
-                        background-color: #d36666
-
-        ul.terminal-lines
-            list-style: none
+        section
+            flex: 1
+            user-select: none
+            padding: 10rem
+            min-height: 100vh
             display: flex
             flex-direction: column
-            padding: 1rem
-            gap: 1rem
-
-            & > li
-                user-select: text
-
-                strong
-                    color: white
-
-                p
-                    color: #c0c0c0
-
-                .dal
-                    color: #d3c366
-
-                &::selection
-                    color: #111010
-                    background-color: #d7d7d7
-
-                &::before
-                    content: "~ $"
-
-    ul.shell-list
-        li::before
-            content: "- "
-
-@keyframes blink
-    0%
-        opacity: 1
-    50%
-        opacity: 0
-    100%
-        opacity: 1
+            gap: 5rem
 
 .cursor-blink
     content: "a"

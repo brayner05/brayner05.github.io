@@ -1,0 +1,22 @@
+@use 'theme'
+
+nav
+    padding: 1rem 1.5rem
+    background-color: theme.$secondary-bg
+    width: 100%
+    font-size: 1rem
+    position: fixed
+    bottom: 0
+    left: 0
+
+    ul
+        display: flex
+        list-style: none
+        gap: 1.5rem
+
+        li
+            a
+                text-decoration: none
+
+                &:hover
+                    text-decoration: underline

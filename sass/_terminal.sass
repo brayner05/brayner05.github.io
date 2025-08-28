@@ -1,0 +1,68 @@
+@use 'theme'
+
+.terminal
+    width: 100%
+    // min-height: 100rem
+    flex: 1
+    background-color: theme.$secondary-bg
+    border-radius: 10px
+    line-height: 1.8
+    margin: 5rem 0
+
+    .title-bar
+        width: 100%
+        min-height: 1rem
+        background-color: theme.$tertiary-bg
+        color: theme.$secondary-bg
+        border-top-left-radius: 10px
+        border-top-right-radius: 10px
+        padding: 0.2rem 1rem
+        display: flex
+        justify-content: space-between
+        align-items: center
+        font-size: 0.9rem
+
+        .shell-btns
+            display: flex
+            gap: 0.5rem
+
+            .shell-btn
+                width: 0.5rem
+                height: 0.5rem
+                border-radius: 50px
+                background-color: black
+
+                &.minimize
+                    background-color: #d3c366
+
+                &.maximize
+                    background-color: #69d366
+
+                &.close
+                    background-color: #d36666
+
+    ul.terminal-lines
+        list-style: none
+        display: flex
+        flex-direction: column
+        padding: 1rem
+        gap: 1rem
+
+        & > li
+            user-select: text
+
+            strong
+                color: white
+
+            p
+                color: #c0c0c0
+
+            .dal
+                color: #d3c366
+
+            &::selection
+                color: theme.$tertiary-fg
+                background-color: theme.$tertiary-bg
+
+            &::before
+                content: "~ $"

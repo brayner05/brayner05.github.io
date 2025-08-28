@@ -3,65 +3,109 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <title>Brayden Rayner</title>
         <link rel="stylesheet" href="./dist/index.css" />
-        <script
-            src="https://kit.fontawesome.com/65ef779ce0.js"
-            crossorigin="anonymous"
-        ></script>
     </head>
     <body>
         <main>
-            <div class="intro">
-                <h1>Brayden Rayner</h1>
-                <ul class="whoami">
-                    <li class="student">BCS Student @ Dalhousie University</li>
-                    <li class="programmer">Programmer</li>
-                    <li class="foss-enthusiast">Open Source Enthusiast</li>
-                </ul>
-            </div>
-            <div class="about-me">
-                <div class="title-bar">
-                    About Me
-                    <div class="shell-btns">
-                        <div class="shell-btn minimize"></div>
-                        <div class="shell-btn maximize"></div>
-                        <div class="shell-btn close"></div>
+            <section id="about-section">
+                <div class="intro">
+                    <h1>Brayden Rayner</h1>
+                    <ul class="whoami">
+                        <li class="student">
+                            BCS Student @ Dalhousie University
+                        </li>
+                        <li class="programmer">Programmer</li>
+                        <li class="foss-enthusiast">Open Source Enthusiast</li>
+                    </ul>
+                </div>
+                <div class="terminal">
+                    <div class="title-bar">
+                        About Me
+                        <div class="shell-btns">
+                            <div class="shell-btn minimize"></div>
+                            <div class="shell-btn maximize"></div>
+                            <div class="shell-btn close"></div>
+                        </div>
+                    </div>
+                    <ul class="terminal-lines">
+                        <li>
+                            <strong>whoami</strong>
+                            <p>
+                                My name is <strong>Brayden Rayner</strong>, I am
+                                a third-year Bachelor of Computer Science
+                                student at
+                                <span class="dal">Dalhousie University</span>. I
+                                am fascinated with low-level programming,
+                                cybersecurity, automation, language development,
+                                etc.
+                            </p>
+                        </li>
+                        <li>
+                            <strong>skills --list</strong>
+                            <ul class="shell-list">
+                                <li>Low-Level Programming (C/C++/Rust)</li>
+                                <li>Data Analytics (Power BI)</li>
+                                <li>Programming Language Development</li>
+                                <li>Languages: English, French, Italian</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="cursor-blink"></div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section id="my-work">
+                <div class="projects">
+                    <h2>Projects</h2>
+                    <div class="project-card">
+                        <h3>Lox++</h3>
+                        <p>
+                            My C++ implementation of the Lox language created by
+                            Robert Nystrom.
+                        </p>
+                    </div>
+                    <div class="project-card">
+                        <h3>Nadra</h3>
+                        <p>
+                            Nadra is a scripting language with a Ruby-like
+                            syntax that is transpiled into Python 3.
+                        </p>
                     </div>
                 </div>
-                <ul class="terminal-lines">
-                    <!-- TODO: Make a typing effect -->
-                    <li>
-                        <strong>whoami</strong>
+                <div class="articles">
+                    <h2>Articles</h2>
+                    <div class="article-card">
+                        <h3>So, you want to write a parser?</h3>
                         <p>
-                            My name is <strong>Brayden Rayner</strong>, I am a
-                            third-year Bachelor of Computer Science student at
-                            <span class="dal">Dalhousie University</span>. I am
-                            fascinated with low-level programming,
-                            cybersecurity, automation, language development,
-                            etc.
+                            An article I wrote on LinkedIn, which goes over the
+                            process of building an expression parser, touches on
+                            context-free grammars, and provides some challenges
+                            for the reader to attempt.
                         </p>
+                        <div>
+                            <a
+                                href="https://www.linkedin.com/pulse/so-you-want-write-parser-brayden-rayner-jlzue"
+                            >
+                                Read on LinkedIn
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="https://www.linkedin.com/in/brayden-rayner/">
+                            LinkedIn
+                        </a>
                     </li>
                     <li>
-                        <strong>skills --list</strong>
-                        <ul class="shell-list">
-                            <li>Low-Level Programming (C/C++/Rust)</li>
-                            <li>Data Analytics (Power BI)</li>
-                            <li>Programming Language Development</li>
-                            <li>Languages: English, French, Italian</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <div class="cursor-blink"></div>
+                        <a href="https://github.com/brayner05"> GitHub </a>
                     </li>
                 </ul>
-            </div>
+            </nav>
         </main>
-        <nav>
-            <ul>
-                <li><a href="#">LinkedIn</a></li>
-                <li><a href="#">GitHub</a></li>
-            </ul>
-        </nav>
     </body>
 </html>
