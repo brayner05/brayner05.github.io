@@ -335,6 +335,9 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+body:has(:scroll(:below(100px))) {
+  background-color: red;
   overflow: hidden;
 }
 @media screen and (max-width: 2082px) {
