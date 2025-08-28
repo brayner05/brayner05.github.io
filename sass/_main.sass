@@ -18,19 +18,52 @@ section#about-section
             @media screen and (max-width: 2082px)
                 font-size: 1.6rem
 
+            @media screen and (max-width: 1000px)
+                font-size: 1.2rem
+                margin: 0
+
             li
                 margin: 0.8rem 0
                 transform-origin: left
                 transition: ease-in-out .2s
+                display: flex
+                align-items: center
+                gap: 0.8rem
+
+                &::before
+                    content: ""
+                    display: inline-block
+                    background-color: theme.$primary-fg
+                    width: 3px
+                    height: 1.5rem
+                    transition: ease-in-out .2s
+
+                    @media screen and (max-width: 1000px)
+                        display: none
 
                 &:hover
                     transform: scale(1.2)
 
+                    &::before
+                        width: 0.7rem
+
+                span
+                    display: inline-block
+
                 &.student:hover
                     color: #d3c366
+
+                    &::before
+                        background-color: #d3c366
 
                 &.programmer:hover
                     color: #3c4fa7
 
+                    &::before
+                        background-color: #3c4fa7
+
                 &.foss-enthusiast:hover
                     color: #4da05b
+
+                    &::before
+                        background-color: #4da05b
