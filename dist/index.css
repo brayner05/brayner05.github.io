@@ -124,15 +124,14 @@ section#about-section .intro ul.whoami li {
   transform-origin: left;
   transition: ease-in-out 0.2s;
   display: flex;
-  align-items: center;
+  align-items: stretch;
   gap: 0.8rem;
 }
 section#about-section .intro ul.whoami li::before {
   content: "";
   display: inline-block;
-  background-color: #d6d6d6;
+  background-color: #a5a5a5;
   width: 3px;
-  height: 1.5rem;
   transition: ease-in-out 0.2s;
 }
 @media screen and (max-width: 1000px) {
@@ -253,6 +252,7 @@ section#about-section .intro ul.whoami li.foss-enthusiast:hover::before {
   background-color: #1f1d1d;
   padding: 0.5rem 1rem;
   border: #a5a5a5 1px solid;
+  z-index: 9999;
 }
 .terminal ul.terminal-lines > li ul.shell-list li span#french-tooltip:hover div, .terminal ul.terminal-lines > li ul.shell-list li span#italian-tooltip:hover div {
   display: flex;
@@ -366,6 +366,7 @@ body main section {
   body main section {
     padding: 5rem 10rem;
     column-gap: 1rem;
+    overflow-y: none;
   }
 }
 @media screen and (max-width: 1000px) {
@@ -373,6 +374,7 @@ body main section {
     padding: 3rem 2.1rem;
     column-gap: 1rem;
     gap: 2.5rem;
+    overflow-y: none;
   }
 }
 
