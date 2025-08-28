@@ -40,16 +40,19 @@ nav
 
 main
     width: 100%
-    min-height: 70vh
+    min-height: 30vh
     user-select: none
-
     ul
-        margin: 1rem 0
         list-style: none
-        text-transform: uppercase
-        font-weight: 600
-        font-size: 2.2rem
-        color: #a5a5a5
+
+    .intro
+        ul.whoami
+            margin: 1rem 0
+            list-style: none
+            text-transform: uppercase
+            font-weight: 600
+            font-size: 2.2rem
+            color: #a5a5a5
 
         li
             margin: 0.5rem 0
@@ -57,3 +60,105 @@ main
 
             &:hover
                 font-size: 2.5rem
+
+            &.student:hover
+                color: #d3c366
+
+            &.programmer:hover
+                color: #3c4fa7
+
+            &.foss-enthusiast:hover
+                color: #4da05b
+
+    @keyframes typewriter
+        from
+            width: 0%
+        to
+            width: 100%
+
+    .about-me
+        width: 100%
+        min-height: 1rem
+        background-color: #111010
+        border-radius: 10px
+        line-height: 1.8
+        margin: 5rem 0
+
+        .title-bar
+            width: 100%
+            min-height: 1rem
+            background-color: #d7d7d7
+            color: #111010
+            border-top-left-radius: 10px
+            border-top-right-radius: 10px
+            padding: 0.2rem 1rem
+            display: flex
+            justify-content: space-between
+            align-items: center
+            font-size: 0.9rem
+
+            .shell-btns
+                display: flex
+                gap: 0.5rem
+
+                .shell-btn
+                    width: 0.5rem
+                    height: 0.5rem
+                    border-radius: 50px
+                    background-color: black
+
+                    &.minimize
+                        background-color: #d3c366
+
+                    &.maximize
+                        background-color: #69d366
+
+                    &.close
+                        background-color: #d36666
+
+        ul.terminal-lines
+            list-style: none
+            display: flex
+            flex-direction: column
+            padding: 1rem
+            gap: 1rem
+
+            & > li
+                user-select: text
+
+                strong
+                    color: white
+
+                p
+                    color: #c0c0c0
+
+                .dal
+                    color: #d3c366
+
+                &::selection
+                    color: #111010
+                    background-color: #d7d7d7
+
+                &::before
+                    content: "~ $"
+
+    ul.shell-list
+        li::before
+            content: "- "
+
+@keyframes blink
+    0%
+        opacity: 1
+    50%
+        opacity: 0
+    100%
+        opacity: 1
+
+.cursor-blink
+    content: "a"
+    background-color: #fff
+    width: 0.8rem
+    height: 1.2rem
+    animation: blink 1.5s infinite
+    display: inline-flex
+    vertical-align: middle
