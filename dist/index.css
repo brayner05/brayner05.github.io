@@ -81,9 +81,6 @@ section#about-section .intro ul.whoami li.programmer:hover {
 section#about-section .intro ul.whoami li.foss-enthusiast:hover {
   color: #4da05b;
 }
-section#about-section ul.shell-list li::before {
-  content: "- ";
-}
 
 @keyframes blink {
   0% {
@@ -154,6 +151,29 @@ section#about-section ul.shell-list li::before {
 }
 .terminal ul.terminal-lines > li .dal {
   color: #d3c366;
+}
+.terminal ul.terminal-lines > li ul.shell-list li span {
+  text-decoration: underline;
+  text-decoration-color: #a5a5a5;
+}
+.terminal ul.terminal-lines > li ul.shell-list li span#french-tooltip, .terminal ul.terminal-lines > li ul.shell-list li span#italian-tooltip {
+  position: relative;
+  display: inline-block;
+}
+.terminal ul.terminal-lines > li ul.shell-list li span#french-tooltip div, .terminal ul.terminal-lines > li ul.shell-list li span#italian-tooltip div {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #1f1d1d;
+  padding: 0.5rem 1rem;
+  border: #a5a5a5 1px solid;
+}
+.terminal ul.terminal-lines > li ul.shell-list li span#french-tooltip:hover div, .terminal ul.terminal-lines > li ul.shell-list li span#italian-tooltip:hover div {
+  display: flex;
+}
+.terminal ul.terminal-lines > li ul.shell-list li::before {
+  content: "- ";
 }
 .terminal ul.terminal-lines > li::selection {
   color: #111010;
